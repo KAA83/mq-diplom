@@ -7,13 +7,57 @@
         <link href="css/style.css" rel="stylesheet">
     <head>
   
-    <body>     
+    <body>
+        <div class="popup">
+            <div class="popup-content">
+                <h3 class="popup-title">Ваш фидбек</h3>
+            
+                <div class="form-row">
+                    <label class="form-group">
+                    <span class="form-hint">Как часто вы заходите на сайт?</span>
+                    <select class="select">
+                        <option selected>Почти каждый день</option>
+                        <option>Раз в несколько дней</option>
+                        <option>Раз в несколько недель</option>
+                        <option>Несколько раз в год</option>
+                    </select>
+                    </label> 
+                </div>
+                <div class="form-row">
+                    
+                    <label class="radio-group">
+                        <span class="form-hint">Вы подписаны на e-mail рассылку?</span>
+                        <input type="radio" class="radio" name="radio-group">
+                        <span class="radio-group-text">Да</span>
+                    </label>
+                    <label class="radio-group">
+                        <input type="radio" class="radio" name="radio-group">
+                        <span class="radio-group-text">Нет</span>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label class="form-group">
+                    <span class="form-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+                    <textarea class="field-textarea" placeholder="Может, больше рецептов?" required></textarea>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <button class="popup-button" type="submit">Отправить</button>
+                </div>
+                <button class="popup-close" type="button"></button>         
+            </div>
+        </div>     
         <header class="header">
             <div class="container">
             <a href="#0">
             <img src="svg/noemi-logo.svg" class="header-logo" alt="Логотип noemi">
             </a>
             <nav class="menu">
+                <button class="menu-button">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
                 <ul class="menu-list">
                 <li class="menu-list-item">
                     <a class="menu-link" href="#0">Главная</a>
@@ -397,9 +441,15 @@
             <h2 class="products-title">Наши изделия</h2>
             <div class="products">
                 <article class="product">
-                    <div class="product-imgbox">
-                      <img class="product-img" src="../mq-diplom/images/shop-item-desk1.jpg" alt="Превью товара">
-                    </div>
+                    <picture class="product-imgbox">
+                        <source
+                            media="(max-width: 730px)"
+                            srcset="../mq-diplom/images/shop-item-mobile1.jpg">
+                        <source
+                            media="(min-width: 731px) and (max-width: 1200px)"
+                            srcset="../mq-diplom/images/shop-item-tablet1.jpg">
+                        <img class="product-img" src="../mq-diplom/images/shop-item-desk1.jpg" alt="Превью товара">
+                    </picture>
                     <div class="product-body">
                       <div class="product-content">
                         <h3 class="product-title">Подушки на диван</h3>
@@ -423,9 +473,15 @@
                     </div>
                 </article>
                 <article class="product">
-                    <div class="product-imgbox">
-                      <img class="product-img" src="../mq-diplom/images/shop-item-desk2.jpg" alt="Превью товара">
-                    </div>
+                    <picture class="product-imgbox">
+                        <source
+                            media="(max-width: 730px)"
+                            srcset="../mq-diplom/images/shop-item-mobile2.jpg">
+                        <source
+                            media="(min-width: 731px) and (max-width: 1200px)"
+                            srcset="../mq-diplom/images/shop-item-tablet2.jpg">
+                        <img class="product-img" src="../mq-diplom/images/shop-item-desk2.jpg" alt="Превью товара">
+                    </picture>
                     <div class="product-body">
                       <div class="product-content">
                         <h3 class="product-title">Кукла «Зайчик»</h3>
@@ -446,9 +502,15 @@
                     </div>
                 </article>
                 <article class="product">
-                    <div class="product-imgbox">
-                      <img class="product-img" src="../mq-diplom/images/shop-item-desk3.jpg" alt="Превью товара">
-                    </div>
+                    <picture class="product-imgbox">
+                        <source
+                            media="(max-width: 730px)"
+                            srcset="../mq-diplom/images/shop-item-mobile3.jpg">
+                        <source
+                            media="(min-width: 731px) and (max-width: 1200px)"
+                            srcset="../mq-diplom/images/shop-item-tablet3.jpg">
+                        <img class="product-img" src="../mq-diplom/images/shop-item-desk3.jpg" alt="Превью товара">
+                    </picture>
                     <div class="product-body">
                       <div class="product-content">
                         <h3 class="product-title">Шестиугольная рамка</h3>
@@ -505,5 +567,7 @@
             </ul>
             <span class="copyrights">Copyright &copy; 2009–2019 City Blog LLC.</span>
         </footer>
+
+        
     </body>
 </html>
