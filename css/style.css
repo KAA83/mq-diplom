@@ -10,16 +10,16 @@
 /*....................................................FONTS....................................................*/
 
 @font-face {
-  font-family: OpenSans-Regular;
+  font-family: "OpenSans";
   src: url(../fonts/OpenSans-Regular.woff);
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: OpenSans-Bold;
+  font-family: "OpenSans";
   src: url(../fonts/OpenSans-Bold.woff);
-  font-weight: 700;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -36,6 +36,24 @@
   display: flex;
   align-items: center;
   display: none;
+}
+
+.popup-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #0f0d0e;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+}
+
+.popup-title::after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 3px;
+  background-color: #e1d9bd;
+  margin: 7px auto 28px auto;
 }
 
 .popup-content {
@@ -73,6 +91,12 @@
   border: none;
 }
 
+.select:focus {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #b59f5b;
+}
+
 .radio {
   position: absolute;
   width: 1px;
@@ -80,7 +104,7 @@
   clip: rect(1px 1px 1px 1px);
 }
 
-.radio-group:nth-child(n+2) {
+.no {
   margin-left: 15px;
 }
 
@@ -115,6 +139,12 @@
   border: none;
 }
 
+.field-textarea:focus {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #b59f5b;
+}
+
 .popup-button {
   width: 100%;
   height: 48px;
@@ -127,6 +157,10 @@
   color: #ffffff;
   font-family: OpenSans-Bold, Arial, sans-serif;
   cursor: pointer;
+}
+
+.popup-button:hover {
+  background-color: #323232;
 }
 
 .popup-close {
@@ -155,6 +189,7 @@
   z-index: 0;
   padding-top: 29px;
   padding-bottom: 127px;
+  font-family: "OpenSans";
 }
 
 .header::after {
@@ -184,7 +219,8 @@
   font-size: calc(0.561vw + 35.692px);
   line-height: 1.667;
   color: #ffffff;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+
 }
 
 .container {
@@ -200,20 +236,24 @@
 .menu-list {
   display: flex;
   font-size: 13px;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
-.menu-link:hover, .category-link:hover, .product-link:hover {
-  text-decoration: underline;
-}
-
-.menu-list-item:nth-child(n+2) {
+.menu-posts,
+.menu-articles,
+.menu-tags,
+.menu-themes,
+.menu-contacts {
   margin-left: 35px;
 }
 
 .menu-link {
   color: #e9e9e9;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 1201px) {
@@ -275,16 +315,16 @@
 /*....................................................TRENDS....................................................*/
 
 .trends {
-  width: 100%;
   display: block;
   margin-top: 57px;
+  font-family: "OpenSans";
 }
 
 .trends-title {
   text-transform: uppercase;
   font-size: 20px;
   color: #0f0d0e;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   text-align: center;
   display: block;
 }
@@ -311,7 +351,7 @@
   background-color: #666666;
   position: relative;
   z-index: 0;
-  width: 24.8%;
+  width: calc(25% - 3px);
   display: flex;
   align-items: flex-end;
   padding: 135px 20px 15px;
@@ -355,7 +395,7 @@
   font-size: 20px;
   line-height: 1.2;
   color: #ffffff;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
 }
 
 .title-trend-link:hover {
@@ -385,13 +425,14 @@
     } 
 
     .trend {
-      width: 49.8%;
+      width: calc(50% - 2px);
       
     }
 
-    .trend:nth-child(n+3) {
-      margin-top: 5px;
-      padding: 95px 20px 16px;
+    .trend-3,
+    .trend-4 {
+      margin-top: 3px;
+      padding: 96px 20px 16px;
     }
 
     .trend-content {
@@ -400,7 +441,8 @@
     }
   }
 
-  .trend {
+  .trend-1,
+  .trend-2 {
     padding: 75px 20px 15px;
   }
 
@@ -444,9 +486,13 @@
 
 .post {
   display: flex;
+  font-family: "OpenSans";
 }
 
-.post:nth-child(n+2) {
+.post-2,
+.post-3,
+.post-4,
+.post-5 {
   margin-top: 56px;
 }
 
@@ -467,10 +513,11 @@
   text-transform: uppercase;
   color: #b59f5b;
   font-size: 14px;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
 }
 
-.category-list-item:nth-child(n+2) {
+.item-2,
+.item-3 {
   margin-left: 20px;
 }
 
@@ -479,10 +526,10 @@
   font-size: 20px;
   line-height: 1.2;
   color: #0f0d0e;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
 }
 
-.title-post-link:hover, .latest-post-link:hover, .theme-link:hover {
+.title-post-link:hover {
   color: #b59f5b;
 }
 
@@ -493,13 +540,13 @@
 .post-date{
   font-size: 12px;
   color: #888888;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
 }
 
 .post-author-name {
   font-size: 12px;
   color: #000000;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   margin-left: 8px;
 }
 
@@ -508,7 +555,7 @@
   font-size: 15px;
   line-height: 1.467;
   color: #0f0d0e;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
 }
 
 .paragraph {
@@ -521,7 +568,10 @@
       flex-wrap: wrap;
     }
 
-    .post:nth-child(n+2) {
+    .post-2,
+    .post-3,
+    .post-4,
+    .post-5 {
       margin-top: 40px;
     }
 
@@ -542,7 +592,10 @@
       width: 55%;
     }
 
-    .post:nth-child(n+2) {
+    .post-2,
+    .post-3,
+    .post-4,
+    .post-5 {
       margin-top: 56px;
     }
 
@@ -574,6 +627,7 @@
 
 .said-bar {
   width: 270px;
+  font-family: "OpenSans";
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
@@ -592,7 +646,7 @@
   text-transform: uppercase;
   font-size: 14px;
   color: #0f0d0e;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -610,7 +664,10 @@
   display: flex;
 }
 
-.latest-post:nth-child(n+2) {
+.latest-post-2,
+.latest-post-3,
+.latest-post-4,
+.latest-post-5 {
   margin-top: 17px;
 }
 
@@ -628,13 +685,17 @@
   font-size: 14px;
   line-height: 1.286;
   color: #0f0d0e;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.latest-post-link:hover {
+  color: #b59f5b;
 }
 
 .latest-post-date {
   font-size: 12px;
   color: #888888;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
   display: block;
 }
 
@@ -662,13 +723,11 @@
   border: none;
   font-size: 13px;
   color: #000000;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
+  font-family: "OpenSans";
 }
 
-.field:focus, 
-.select:focus, 
-.field-textarea:focus, 
-.subscription-field:focus {
+.field:focus {
   outline-style: solid;
   outline-width: 1px;
   outline-color: #b59f5b;
@@ -714,11 +773,12 @@
 .subscription {
   width: 100%;
   margin-top: 62px;
+  font-family: "OpenSans";
 }
 
 .subscription-title {
   font-size: 14px;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   color: #0f0d0e;
   font-weight: bold;
   text-transform: uppercase;
@@ -751,7 +811,14 @@
   border: none;
   font-size: 13px;
   color: #000000;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-family: "OpenSans";
+  font-weight: 400;
+}
+
+.subscription-field:focus {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #b59f5b;
 }
 
 .subscription-button {
@@ -763,13 +830,12 @@
   font-size: 14px;
   text-transform: uppercase;
   color: #ffffff;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-family: "OpenSans";
+  font-weight: 700;
   cursor: pointer;
 }
 
-.subscription-button:hover, 
-.popup-button:hover, 
-.product-button:hover {
+.subscription-button:hover {
   background-color: #323232;
 }
 
@@ -779,11 +845,12 @@
 .tags {
   width: 100%;
   margin-top: 56px;
+  font-family: "OpenSans";
 }
 
 .tags-title {
   font-size: 14px;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   color: #0f0d0e;
   font-weight: bold;
   text-transform: uppercase;
@@ -802,7 +869,7 @@
 .tags-list {
   display: flex;
   font-size: 12px;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   flex-wrap: wrap;
   color: #0f0d0e;
@@ -815,13 +882,21 @@
   border: 3px solid #eeeeee;
 }
 
-.tags-list-item:nth-child(3n+2) {
+.tags-list-2,
+.tags-list-3 {
   margin-left: 6px;
-  margin-right: 6px;
 }
 
-.tags-list-item:nth-child(n+4) {
+.tags-list-4,
+.tags-list-7 {
   margin-top: 5px;
+}
+
+.tags-list-5,
+.tags-list-6,
+.tags-list-8 {
+  margin-top: 5px;
+  margin-left: 6px;
 }
 
 .tags-link:hover {
@@ -834,13 +909,13 @@
 .themes {
   width: 100%;
   margin-top: 55px;
+  font-family: "OpenSans";
 }
 
 .themes-title {
   font-size: 14px;
-  font-family: OpenSans-Bold, Arial, sans-serif;
   color: #0f0d0e;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
 }
@@ -855,7 +930,7 @@
 }
 
 .themes-list {
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   flex-wrap: wrap;
 }
 
@@ -864,13 +939,21 @@
   color: #0f0d0e;
 }
 
+.theme-link:hover {
+  color: #b59f5b;
+}
+
 .theme {
   width: 100%;
   padding: 7px 0 12px 0;
   border-bottom: 1px solid #eeeeee;
 }
 
-.theme:nth-child(n+2) {
+.theme-2,
+.theme-3,
+.theme-4,
+.theme-5,
+.theme-6 {
   margin-top: 5px;
 }
 
@@ -887,18 +970,19 @@
   padding: 57px 15px 0 15px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "OpenSans";
 }
 
-.products-title, .popup-title {
+.products-title {
   text-transform: uppercase;
   font-size: 20px;
   color: #0f0d0e;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   text-align: center;
   display: block;
 }
 
-.products-title::after, .popup-title::after {
+.products-title::after {
   content: "";
   display: block;
   width: 66px;
@@ -932,7 +1016,7 @@
 .product-title {
   text-transform: uppercase;
   color: #0f0d0e;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   display: block;
 }
 
@@ -940,7 +1024,7 @@
   font-size: 15px;
   line-height: 1.467;
   color: #0f0d0e;
-  font-family: OpenSans-Regular, Arial, sans-serif;
+  font-weight: 400;
 }
 
 .product-link {
@@ -956,8 +1040,13 @@
   font-size: 14px;
   text-transform: uppercase;
   color: #ffffff;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-family: "OpenSans";
+  font-weight: 700;
   cursor: pointer;
+}
+
+.product-button:hover {
+  background-color: #323232;
 }
 
 .product-footer {
@@ -973,12 +1062,12 @@
 
 .product-price {
   font-size: 20px;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
 }
 
 .product-price-old {
   font-size: 14px;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-weight: 700;
   text-decoration: line-through;
 }
 
@@ -992,7 +1081,7 @@
       width: 48%;
     }
 
-    .product:nth-child(n+3) {
+    .product-3 {
       margin-top: 27px;
     }
 
@@ -1110,7 +1199,8 @@
   margin-top: 70px;
   font-size: 12px;
   text-align: center;
-  font-family: OpenSans-Bold, Arial, sans-serif;
+  font-family: "OpenSans";
+  font-weight: 700;
   color: #999999;
 }
 
@@ -1123,8 +1213,4 @@
   .widget-socials {
     margin-top: 50px;
   }
-  
 }
-
-
-
