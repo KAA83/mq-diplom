@@ -1,0 +1,621 @@
+/*....................................................POPUP....................................................*/
+
+@media (max-width: 640px) {
+  .popup-content {
+    max-width: 85vw;
+  }
+
+  @media (orientation: portrait) {
+    .popup-content {
+      margin-top: 55px;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .popup-content {
+      margin-top: 320px;
+    }
+  }
+}
+
+
+/*....................................................HEADER....................................................*/
+
+@media (min-width: 1201px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .menu-list {
+    display: none;
+  }
+
+  .menu-button {
+    display: flex;
+    width: 24px;
+    height: 19px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+  }
+
+  .line {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header-logo {
+    display: block;
+    width: 158px;
+  }
+  
+  .header {
+    background-image: url("../images/banner-bg-tablet.jpg");
+    padding: 44px 35px 112px;
+  }
+
+  .header-label {
+    font-size: calc(0.561vw + 35.692px);
+    line-height: 1.375;
+    margin-top: 90px;
+    width: 73%;
+  }
+
+  @media (orientation: portrait) {
+    .header-label {
+      width: 93%;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .header-logo {
+    display: block;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 174px;
+  }
+
+  .menu-button {
+    margin-left: auto;
+  }
+
+  .header {
+    background-image: url("../images/banner-mobile.jpg");
+    padding: 32px 15px 211px;
+  }
+
+  .header-label {
+    width: 93%;
+    font-size: calc(3.199vw + 13.941px);
+    line-height: 1.385;
+    margin-top: 34px;
+  }
+}
+
+
+/*....................................................TRENDS....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .trends {
+    margin-top: 47px;
+  }
+  
+  .trends-title {
+    font-size: calc(0.463vw + 14.444px);
+  }
+
+  .trends-title::after {
+    margin: 12px auto 19px auto;
+  }
+
+  @media (orientation: portrait) {
+    .trends-list {
+      flex-wrap: wrap;
+      gap: 4px;
+    } 
+
+    .trend {
+      width: 49%;
+      flex-grow: 1;
+      padding: 75px 20px 15px;
+    }
+
+    .trend-3,
+    .trend-4 {
+      padding: 96px 20px 16px;
+    }
+
+    .trend-content {
+      border: 2px solid #b59f5b;
+      padding: 30px 32px 30px;
+    }
+
+    .title-trend {
+      margin: 10px 0 0px 0px;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .trend {
+      padding: 75px 20px 15px;
+    }
+  }
+
+  .trend-content {
+    border: 2px solid #b59f5b;
+    padding: 33px 30px 30px;
+  }
+
+  .title-trend-link {
+    font-size: calc(0.694vw + 11.67px);
+    line-height: 1.23;
+  }
+}
+
+@media (max-width: 640px) {
+  .trends-title {
+    font-size: calc(0.49vw + 14.236px);
+  }
+
+  .trends {
+    margin-top: 42px;
+  }
+
+  .trends-title::after {
+    margin: 10px auto 25px auto;
+  }
+
+  .title-trend-link {
+    font-size: calc(0.245vw + 15.118px);
+    line-height: 1.25;
+  }
+
+  .trend-content {
+    padding: 30px 20px 27px;
+  }
+
+  .trend {
+    padding: 87px 14px 15px;
+  }
+
+  .trend-2 {
+    padding-top: 67px;
+  }
+
+  .trends-list {
+    flex-wrap: wrap;
+  }
+
+  @media (orientation: portrait) {
+    .trend {
+      width: 100%;
+    }   
+  }
+
+  @media (orientation: landscape) {
+    .trend {
+      width: 49%;
+      flex-grow: 1;
+      padding: 44px 14px 15px;
+    }
+
+    .trend-3,
+    .trend-4 {
+      padding: 65px 14px 15px;
+    }
+  }
+}
+
+
+/*....................................................PAGE....................................................*/
+
+@media (min-width: 641px) {
+  .main {
+    max-width: 67%;
+  }
+}
+
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .page {
+    padding: 48px 35px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 44px 15px 0;
+    
+  }
+
+  @media (orientation: portrait) {
+    .page {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .main {
+      max-width: 50%;
+    }
+  }
+}
+
+
+/*....................................................POST....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  @media (orientation: portrait) {
+    .post {
+      flex-wrap: wrap;
+    }
+
+    .post-secondary {
+      margin-top: 41px;
+    }
+
+    .post-header {
+      width: 100%;
+    }
+
+    .title-post {
+      margin: 4px 0 30px 0px;
+    }
+
+    .post-content {
+      margin-top: 13px;
+      padding-bottom: 18px;
+      border-bottom: 3px solid #eeeeee;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .post-content {
+      margin-left: 15px;
+      width: 55%;
+    }
+
+    .post-secondary {
+      margin-top: 56px;
+    }
+
+    .post-header {
+      width: 45%;
+    }
+
+  }
+
+  .paragraph {
+    line-height: 1.45;
+    margin-top: 31px;
+  }
+
+  .paragraph-2 {
+    margin-top: 8px;
+  }
+
+  .title-post-link {
+    font-size: calc(0.336vw + 14.42px);
+    line-height: 1;
+  }
+
+  .post-img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1201px) {
+  .post-content {
+    margin-left: 30px;
+    width: 47%;
+  }
+}
+
+@media (max-width: 640px) {
+  .post {
+    flex-wrap: wrap;
+  }
+
+  .post-secondary {
+    margin-top: 36px;
+  }
+
+  .title-post {
+    margin: 5px 0 13px 0px;
+  }
+  
+  .title-post-link {
+    font-size: calc(0.245vw + 15.118px);
+    line-height: 1;
+  }
+
+  .paragraph {
+    margin-top: 16px;
+    font-size: calc(0.245vw + 13.118px);
+    line-height: 1.428;
+  }
+
+  .paragraph-2 {
+    margin-top: 4px;
+  }
+
+  .post-content {
+    margin-top: 10px;
+  }
+  
+  
+  @media (orientation: portrait) {
+    .post-img {
+      width: 100%;
+    }
+
+    .post-content {
+      margin-top: 13px;
+      padding-bottom: 18px;
+      border-bottom: 3px solid #eeeeee;
+    }
+
+  }
+
+  @media (orientation: landscape) {
+    .post-img {
+      width: 100%;
+    }
+
+    .post {
+      width: 100%;
+      flex-grow: 2;
+    }
+  }
+
+  
+}
+
+
+/*....................................................SAID_BAR....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  @media (orientation: portrait) {
+    .said-bar {
+      min-width: 270px;
+      margin-left: 35px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  @media (orientation: portrait) {
+    .said-bar {
+      width: 100%;
+      padding-top: 47px;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .said-bar {
+      max-width: 42%;
+    }
+  } 
+}
+
+
+/*....................................................LATEST_POSTS....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .latest-posts-title::after {
+    margin: 13px auto 28px auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .latest-posts-title {
+    font-size: calc(17.849px - 0.49vw);
+  }
+}
+
+  
+/*....................................................SUBSCRIPTION....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .subscription {
+    margin-top: 60px;
+  }
+
+  .subscription-title::after {
+    margin-bottom: 23px;
+  }
+}
+
+@media (max-width: 640px) {
+  .subscription {
+    margin-top: 43px;
+  }
+  
+  .subscription-title {
+    font-size: calc(17.849px - 0.49vw);
+  }
+}
+
+
+/*....................................................TAGS....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .tags {
+    margin-top: 59px;
+  }
+
+  .tags-title::after {
+    margin-bottom: 23px;
+  }
+
+  .tags-link {
+    padding: 7px 13px;
+    line-height: 1;
+  }
+
+  .tags-list {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .tags {
+    margin-top: 42px;
+  }
+  
+  .tags-title {
+    font-size: calc(17.849px - 0.49vw);
+  }
+}
+
+
+/*....................................................THEMES....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .themes {
+    margin-top: 57px;
+  }
+}
+
+@media (max-width: 640px) {
+  .themes {
+    margin-top: 48px;
+  }
+  
+  .themes-title {
+    font-size: calc(17.849px - 0.49vw);
+  }
+}
+
+/*....................................................OUR_PRODUCTS....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  @media (orientation: portrait) {
+    .products {
+      flex-wrap: wrap;
+    }
+
+    .product {
+      width: 48%;
+    }
+
+    .product-3 {
+      margin-top: 29px;
+    }
+
+    .product-body {
+      padding: 53px 18px 26px;
+      margin: -35px -22px 0;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .product {
+      width: 30%;
+    }
+  }
+
+  .product-title {
+    font-size: calc(0.336vw + 14.42px);
+  }
+
+  .products-title {
+    font-size: calc(0.224vw + 16.28px);
+  }
+
+  .our-products {
+    padding: 43px 35px 0;
+  }
+
+  .product-button {
+    margin-top: 22px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .product {
+    width: 30%;
+  }
+
+  .product-button {
+    margin-top: 23px;
+  }
+
+  .product-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .our-products {
+    padding: 44px 15px 0 15px;
+  }
+  
+  .products-title {
+    font-size: calc(17.849px - 0.49vw);
+  }
+
+  .products {
+    flex-wrap: wrap;
+    gap: 23px;
+  }
+
+  .product-body {
+    padding: 51px 16px 26px;
+    margin: -31px -22px 0;
+  }
+
+  .product-button {
+    margin-top: 22px;
+  }
+
+  @media (orientation: landscape) {
+    .product {
+      width: 48%;
+    }
+  }
+}
+
+
+/*....................................................WIDGET....................................................*/
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .widget {
+    max-width: 1200px;
+    padding: 0 35px 10px;
+  }
+
+  .widget-socials {
+    margin-top: 50px;
+  }
+
+  .copyrights {
+    margin-top: 51px;
+  }
+}
+
+@media (max-width: 640px) {
+  .widget-socials {
+    margin-top: 40px;
+  }
+
+  .copyrights {
+    margin-top: 50px;
+  }
+}
